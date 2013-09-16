@@ -3,17 +3,15 @@ var largestPrimeFactor = function nextFactor(number, candidate) {
 
     candidate = candidate || 2;
 
-    // return the largest prime factor
-    if (candidate === number) {
-        return candidate;
-    }
-    // if the number is divisible by the candidate
-    if (number % candidate === 0) {
-        number /= candidate;   // divide and try the candidate again
+    // if the number is NOT divisible by the candidate
+    if (number % candidate) {
+        candidate += 1; // try the next number
     } else {
-        candidate += 1;    // try the next number
+        number /= candidate;    // divide and try the candidate again
     }
-    return nextFactor(number, candidate);
+    return (candidate === number)
+        ? candidate // return the largest prime factor
+        : nextFactor(number, candidate);
 };
 
 largestPrimeFactor(600851475143);
