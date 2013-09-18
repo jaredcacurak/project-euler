@@ -24,7 +24,7 @@ function smallestMultiple(numbers) {
                 counter += 1;   // increment the counter
                 number /= candidate;    // divide and try again
             }
-            // else the number is not a factor of the cadidate
+            // else the number is not a factor of the candidate
             else {
 
                 // if the counter is greater than the recorded value
