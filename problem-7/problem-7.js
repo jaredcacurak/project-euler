@@ -3,14 +3,14 @@ function nthPrime(nth) {
 
     var found, number, primes;
 
-    found = 0;
+    found = 1;
     number = 1;
-    primes = [];
+    primes = [2];
 
     if (nth < 1) { return NaN; }
 
     while (found < nth) {
-        number += 1;
+        number += 2;
 
         if (isPrime(number)) {
             found += 1;
