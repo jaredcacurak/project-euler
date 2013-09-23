@@ -7,6 +7,8 @@ function nthPrime(nth) {
     number = 1;
     primes = [];
 
+    if (nth < 1) { return NaN; }
+
     while (found < nth) {
         number += 1;
 
